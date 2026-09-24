@@ -1,0 +1,26 @@
+Execucao iniciada em Wed 08/26/2026  8:46:19.22 
+- Preparing the list of your Firebase projects
+√ Preparing the list of your Firebase projects
+Projeto selecionado: teste-3f48c 
+Execucao iniciada em Sun 09/13/2026 12:53:10.49 
+- Preparing the list of your Firebase projects
+√ Preparing the list of your Firebase projects
+- Preparing the list of your Firebase projects
+√ Preparing the list of your Firebase projects
+Projeto selecionado: fraudes-tcc 
+Deploy OK em Sun 09/13/2026 12:53:51.44 
+Execucao iniciada em Sat 09/19/2026 13:17:09.47 
+Site desativado em Sat 09/19/2026 13:17:20.64 
+Execucao iniciada em Sat 09/19/2026 13:19:10.39 
+- Preparing the list of your Firebase projects
+√ Preparing the list of your Firebase projects
+Projeto selecionado: fraudes-tcc 
+Execucao iniciada em Sat 09/19/2026 13:22:57.56 
+Pasta trocada para . em Sat 09/19/2026 13:23:06.00 
+Site desativado em Sat 09/19/2026 13:23:23.98 
+- Preparing the list of your Firebase projects
+√ Preparing the list of your Firebase projects
+Execucao iniciada em Sat 09/19/2026 13:24:16.17 
+- Preparing the list of your Firebase projects
+√ Preparing the list of your Firebase projects
+Deploy OK em Sat 09/19/2026 13:24:55.45 

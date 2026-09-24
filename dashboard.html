@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dados da pesquisa — fraude.</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cpath d='M22 8 H92 V34 H46 V54 H82 V80 H46 V112 L22 96 Z' fill='%23d81922'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&family=Barlow+Condensed:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+</head>
+<body data-page="dashboard">
+
+<div id="site-header"></div>
+
+<div class="wrap breadcrumb"><a href="index.html">Início</a> / Dados da pesquisa</div>
+
+<section class="page-banner">
+  <div class="wrap">
+    <span class="cat-tag cat-blue page-banner-tag">Pesquisa de campo · Acesso público</span>
+    <h1 class="page-title headline">O que a comunidade respondeu</h1>
+    <p class="page-dek">Questionário aplicado à comunidade em geral via Google Forms, com perguntas sobre exposição a cada tipo de golpe, perfil etário e comportamento diante de contatos desconhecidos.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+
+    <div id="dash-content">
+      <div class="dash-header">
+        <div class="live-dot" id="dash-live-dot"></div>
+        <span class="live-label" id="dash-live-indicator">verificando planilha…</span>
+        <span class="dash-count" id="dash-count">dados de referência</span>
+        <button type="button" class="dash-refresh-btn" id="dash-refresh-btn">Atualizar agora</button>
+      </div>
+      <div class="dash-updated mono" id="dash-updated">verificando planilha…</div>
+      <p id="dash-help" class="section-desc" style="font-size:12.5px; margin:-6px 0 18px;">Se a conexão falhar, geralmente é um destes dois motivos: <strong>(1)</strong> a página está aberta direto do computador (endereço começando com <code>file:///</code>) — navegadores bloqueiam esse tipo de página de buscar dados externos; a solução é hospedar o site (ex: arrastar a pasta em <a href="https://app.netlify.com/drop" target="_blank" rel="noopener">app.netlify.com/drop</a>, gratuito, gera um link em segundos) ou rodar um servidor local. <strong>(2)</strong> a planilha não está compartilhada como <strong>"Qualquer pessoa com o link → Leitor"</strong> no Google Sheets.</p>
+
+      <div id="dash-placeholder" class="dash-placeholder" style="display:none;"></div>
+
+      <div class="dash-grid" id="dash-grid">
+        <div class="dash-card dash-card-wide">
+          <div class="dash-card-title">Exposição a cada tipo de golpe</div>
+          <div class="dash-card-sub">Percentual de respondentes que já recebeu tentativa ou já foi vítima — clique em uma fatia para ver o detalhe</div>
+          <div class="chart-wrap chart-wrap-tall"><canvas id="chart-golpes"></canvas></div>
+          <div id="golpe-detail" class="golpe-detail"></div>
+        </div>
+
+        <div class="dash-mini-grid">
+          <div class="dash-card">
+            <div class="dash-card-title">Faixa etária dos respondentes</div>
+            <div class="chart-wrap"><canvas id="chart-idade"></canvas></div>
+          </div>
+          <div class="dash-card">
+            <div class="dash-card-title">Uso de apps bancários/Pix</div>
+            <div class="chart-wrap"><canvas id="chart-frequencia"></canvas></div>
+          </div>
+          <div class="dash-card dash-card-span2">
+            <div class="dash-card-title">Ao receber contato de número desconhecido</div>
+            <div class="chart-wrap"><canvas id="chart-atitude"></canvas></div>
+          </div>
+        </div>
+      </div>
+
+      <a href="opiniao.html" class="section-link" style="margin-top:26px; display:inline-flex;">Deixe também sua opinião →</a>
+
+      <div id="exclusive-panel" style="margin-top:32px;"></div>
+
+      <details style="margin-top:24px; border:1px dashed var(--line-strong); border-radius:6px; padding:12px 16px; background:var(--bg-soft);">
+        <summary style="cursor:pointer; font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:13px; text-transform:uppercase; color:var(--ink-mute);">Ver diagnóstico técnico da conexão com a planilha</summary>
+        <p class="section-desc" style="font-size:12px; margin:10px 0;">Mostra, pra cada tipo de golpe, qual coluna da planilha o código encontrou e algumas respostas reais — útil pra checar se o texto das perguntas/respostas está batendo com o esperado.</p>
+        <div id="debug-panel" style="overflow-x:auto;"></div>
+      </details>
+    </div>
+
+  </div>
+</section>
+
+<footer><div id="site-footer"></div></footer>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-storage-compat.js"></script>
+<script src="firebase-config.js"></script>
+<script src="firebase-auth.js"></script>
+<script src="common.js"></script>
+<script src="survey-data.js"></script>
+<script src="dashboard.js"></script>
+</body>
+</html>

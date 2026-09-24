@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>fraude. — Engenharia social e golpes digitais</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cpath d='M22 8 H92 V34 H46 V54 H82 V80 H46 V112 L22 96 Z' fill='%23d81922'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&family=Barlow+Condensed:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+</head>
+<body data-page="home">
+
+<div id="site-header"></div>
+
+<section class="hero" id="topo">
+  <div class="wrap">
+    <span class="hero-eyebrow">Reportagem especial · Engenharia social</span>
+    <div class="hero-grid">
+      <div>
+        <h1 class="hero-title headline">O golpe não ataca a máquina. Ataca você.</h1>
+        <p class="hero-dek">A maior parte dos golpes digitais no Brasil não explora falha de sistema — explora confiança, medo e pressa. Levantamento do curso técnico em informática do CETEP reúne dados oficiais e uma pesquisa própria com a comunidade para explicar como isso acontece.</p>
+        <div class="hero-meta">Pesquisa CETEP · Curso Técnico em Informática · 2026</div>
+        <div class="hero-actions">
+          <a href="opiniao.html" class="btn-primary">Deixe sua opinião →</a>
+          <a href="golpes.html" class="btn-ghost">Ver os golpes mais comuns</a>
+        </div>
+      </div>
+      <div>
+        <div class="sidebar-box">
+          <div class="sidebar-title">+ Lidas</div>
+          <a class="sidebar-item" href="golpes.html">
+            <div class="sidebar-num">01</div>
+            <div>
+              <div class="sidebar-text">Falso funcionário de banco lidera queixas de golpe por telefone</div>
+              <span class="sidebar-tag">Vishing</span>
+            </div>
+          </a>
+          <a class="sidebar-item" href="golpes.html">
+            <div class="sidebar-num">02</div>
+            <div>
+              <div class="sidebar-text">Golpe do "filho com número novo" continua entre os mais aplicados no país</div>
+              <span class="sidebar-tag">WhatsApp</span>
+            </div>
+          </a>
+          <a class="sidebar-item" href="golpes.html">
+            <div class="sidebar-num">03</div>
+            <div>
+              <div class="sidebar-text">Clonagem de voz por IA já engana até quem desconfia de golpe</div>
+              <span class="sidebar-tag">Inteligência artificial</span>
+            </div>
+          </a>
+          <div class="phone-frame">
+            <div class="phone-label"><span>Simulação</span><span id="phone-time">exemplo</span></div>
+            <div class="msg-bubble" id="msg-bubble">
+              <div class="msg-sender" id="msg-sender">Banco Seguro</div>
+              <div class="msg-body" id="msg-body">Detectamos uma compra suspeita de R$ 1.847,00. Confirme seus dados para cancelar a transação.</div>
+              <span class="msg-tag" id="msg-tag">Autoridade + urgência</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stats-bar">
+  <div class="wrap stats-grid">
+    <div>
+      <div class="stat-num"><span class="count-up" data-target="24" data-suffix="%">0%</span></div>
+      <div class="stat-label">dos brasileiros com mais de 16 anos perderam dinheiro com crime cibernético em 12 meses</div>
+      <div class="stat-source">DataSenado, 2024</div>
+    </div>
+    <div>
+      <div class="stat-num">R$<span class="count-up" data-target="10.1" data-decimals="1" data-suffix="bi">0bi</span></div>
+      <div class="stat-label">de prejuízo estimado ao setor bancário brasileiro apenas em 2024</div>
+      <div class="stat-source">FEBRABAN, 2025</div>
+    </div>
+    <div>
+      <div class="stat-num"><span class="count-up" data-target="553" data-suffix="mi">0mi</span></div>
+      <div class="stat-label">tentativas de phishing bloqueadas no Brasil em 12 meses — 1,5 milhão por dia</div>
+      <div class="stat-source">Kaspersky, 2025</div>
+    </div>
+    <div>
+      <div class="stat-num">2/3</div>
+      <div class="stat-label">das violações de segurança analisadas envolveram o elemento humano</div>
+      <div class="stat-source">Verizon DBIR, 2024</div>
+    </div>
+  </div>
+</div>
+
+<section class="panorama" id="panorama">
+  <div class="wrap panorama-grid">
+    <div>
+      <span class="section-tag">Aberto a todo mundo · sem login</span>
+      <h2 class="section-title headline" style="margin-top:6px;">O que a comunidade já respondeu</h2>
+      <p class="section-desc" style="margin-top:10px;">Prévia da pesquisa de campo do TCC, aplicada com a comunidade em geral. <span id="panorama-count" class="mono"></span></p>
+      <div class="panorama-big-stat">
+        <span class="panorama-big-num" id="panorama-total">57</span>
+        <span class="panorama-big-label">pessoas já responderam ao questionário sobre golpes digitais</span>
+      </div>
+      <a href="dashboard.html" class="section-link">Ver todos os gráficos e o painel completo →</a>
+    </div>
+    <div class="panorama-chart-box">
+      <div class="panorama-chart-title">Top 5 golpes mais recebidos</div>
+      <div class="chart-wrap"><canvas id="panorama-chart"></canvas></div>
+      <div id="panorama-status" class="dash-placeholder" style="display:none; padding:20px;"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="destaques">
+  <div class="wrap">
+    <div class="section-bar">
+      <h2 class="section-title headline">Nesta edição</h2>
+      <span class="section-tag">Panorama completo</span>
+    </div>
+    <div class="destaques-grid">
+      <a href="golpes.html" class="dest-card featured reveal">
+        <div class="photo-block pb-red" data-img="images/dest-golpes.jpg" data-cover="OG">
+          <span class="cat-tag cat-red">Os golpes</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><path d="M12 2 3 6v6c0 5 4 8 9 10 5-2 9-5 9-10V6l-9-4Z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <div class="dest-body">
+          <div class="dest-title">Os 6 golpes mais praticados no Brasil, explicados um a um</div>
+          <p class="dest-dek">Phishing, vishing, falso familiar, clonagem de conta, Pix e clonagem de voz por IA — como cada um funciona e qual gatilho psicológico explora.</p>
+          <span class="dest-more">Ler catálogo completo →</span>
+        </div>
+      </a>
+      <a href="gatilhos.html" class="dest-card reveal">
+        <div class="photo-block pb-amber" data-img="images/dest-gatilhos.jpg" data-cover="CP">
+          <span class="cat-tag cat-amber">Comportamento</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+        </div>
+        <div class="dest-body">
+          <div class="dest-title">Cinco gatilhos, um único padrão</div>
+          <p class="dest-dek">Por que pessoas atentas também caem em golpes — os princípios de persuasão de Cialdini aplicados ao crime digital.</p>
+          <span class="dest-more">Entender os gatilhos →</span>
+        </div>
+      </a>
+      <a href="noticias.html" class="dest-card reveal">
+        <div class="photo-block pb-ink" data-img="images/dest-noticias.jpg" data-cover="NT">
+          <span class="cat-tag cat-outline-red" style="background:#fff;">Notícias</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M7 8h10M7 12h10M7 16h6"/></svg>
+        </div>
+        <div class="dest-body">
+          <div class="dest-title">Cobertura: o que a imprensa tem noticiado sobre golpes</div>
+          <p class="dest-dek">Seleção de reportagens nacionais e internacionais sobre engenharia social, phishing e fraudes com IA.</p>
+          <span class="dest-more">Ver notícias →</span>
+        </div>
+      </a>
+      <a href="dashboard.html" class="dest-card reveal">
+        <div class="photo-block pb-blue" data-img="images/dest-dashboard.jpg" data-cover="PQ">
+          <span class="cat-tag cat-blue">Pesquisa</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><path d="M4 20V10M12 20V4M20 20v-7"/></svg>
+        </div>
+        <div class="dest-body">
+          <div class="dest-title">O que 52 pessoas responderam sobre golpes digitais</div>
+          <p class="dest-dek">Painel com os dados da pesquisa de campo aplicada pela equipe à comunidade, em gráficos interativos.</p>
+          <span class="dest-more">Ver o painel →</span>
+        </div>
+      </a>
+      <a href="opiniao.html" class="dest-card reveal">
+        <div class="photo-block pb-green" data-img="images/dest-opiniao.jpg" data-cover="OP">
+          <span class="cat-tag cat-green">Participe</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><path d="M21 11.5a8.5 8.5 0 01-8.5 8.5 8.4 8.4 0 01-4-1L3 20l1.2-3.6A8.4 8.4 0 013 12.5 8.5 8.5 0 0111.5 4 8.5 8.5 0 0121 11.5Z"/></svg>
+        </div>
+        <div class="dest-body">
+          <div class="dest-title">O que você acha? Deixe sua opinião</div>
+          <p class="dest-dek">Um espaço rápido e anônimo para a comunidade opinar sobre o tema e ajudar a complementar a pesquisa do TCC.</p>
+          <span class="dest-more">Responder →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer><div id="site-footer"></div></footer>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-storage-compat.js"></script>
+<script src="firebase-config.js"></script>
+<script src="firebase-auth.js"></script>
+<script src="common.js"></script>
+<script src="survey-data.js"></script>
+<script src="home-chart.js"></script>
+<script>
+  /* mensagem simulada do hero */
+  const messages = [
+    { sender: 'Banco Seguro', body: 'Detectamos uma compra suspeita de R$ 1.847,00. Confirme seus dados para cancelar a transação.', tag: 'Autoridade + urgência' },
+    { sender: 'Mãe (novo número)', body: 'Filho, troquei de celular e preciso que você pague uma conta pra mim agora, é urgente.', tag: 'Confiança + urgência' },
+    { sender: 'Central Recebimento', body: 'Sua encomenda está retida na alfândega. Clique no link para liberar antes que retorne ao remetente.', tag: 'Urgência' },
+    { sender: 'Suporte Técnico', body: 'Identificamos acesso não autorizado à sua conta. Informe o código recebido por SMS para bloquear.', tag: 'Autoridade + medo' },
+  ];
+  let idx = 0;
+  const bubble = document.getElementById('msg-bubble');
+  const sender = document.getElementById('msg-sender');
+  const body = document.getElementById('msg-body');
+  const tag = document.getElementById('msg-tag');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function renderMsg(i){
+    sender.textContent = messages[i].sender;
+    body.textContent = messages[i].body;
+    tag.textContent = messages[i].tag;
+  }
+  if(!reduceMotion){
+    setInterval(() => {
+      bubble.style.opacity = '0';
+      setTimeout(() => {
+        idx = (idx + 1) % messages.length;
+        renderMsg(idx);
+        bubble.style.opacity = '1';
+      }, 300);
+    }, 3800);
+  }
+</script>
+</body>
+</html>

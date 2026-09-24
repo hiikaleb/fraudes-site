@@ -1,0 +1,27 @@
+Coloque aqui as fotos reais, com estes nomes exatos, que elas
+aparecem sozinhas no lugar do degradê (não precisa mexer em código):
+
+Página inicial (cards "Nesta edição"):
+  dest-golpes.jpg
+  dest-gatilhos.jpg
+  dest-noticias.jpg
+  dest-dashboard.jpg
+  dest-opiniao.jpg
+
+Página "Os golpes":
+  golpe-phishing.jpg
+  golpe-vishing.jpg
+  golpe-falso-familiar.jpg
+  golpe-clonagem-conta.jpg
+  golpe-pix-boleto.jpg
+  golpe-clonagem-voz-ia.jpg
+
+Página "Notícias" (na ordem dos 6 cards):
+  noticia-1.jpg
+  noticia-2.jpg
+  noticia-3.jpg
+  noticia-4.jpg
+  noticia-5.jpg
+  noticia-6.jpg
+
+Tamanho ideal: 1200x750px (proporção 16:10), formato jpg ou png.

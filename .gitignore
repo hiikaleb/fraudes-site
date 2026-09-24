@@ -1,0 +1,33 @@
+﻿# Dependencies
+node_modules/
+.pnpm-store/
+.yarn/
+.venv/
+venv/
+__pycache__/
+
+# Build
+dist/
+build/
+out/
+target/
+bin/
+obj/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# IDE / OS
+.vscode/
+.idea/
+*.code-workspace
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Local files
+*.local

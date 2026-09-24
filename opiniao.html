@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deixe sua opinião — fraude.</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cpath d='M22 8 H92 V34 H46 V54 H82 V80 H46 V112 L22 96 Z' fill='%23d81922'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&family=Barlow+Condensed:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .opiniao-frame-wrap{border-radius:6px; overflow:hidden; border:1px solid var(--line-strong); background:var(--bg-soft);}
+  .opiniao-frame-wrap iframe{width:100%; min-height:640px; border:none; display:block; background:#fff;}
+  .opiniao-fallback{font-size:12.5px; color:var(--ink-mute); margin-top:10px; text-align:center;}
+  .opiniao-fallback a{color:var(--red); font-weight:700; text-decoration:underline;}
+</style>
+</head>
+<body data-page="opiniao">
+
+<div id="site-header"></div>
+
+<div class="wrap breadcrumb"><a href="index.html">Início</a> / Opinião</div>
+
+<section class="section" id="opiniao">
+  <div class="wrap">
+    <div class="oficina">
+      <div class="oficina-grid">
+        <div class="oficina-left">
+          <span class="oficina-badge">Rápido · Anônimo</span>
+          <h2 class="oficina-title headline">O que você acha desse assunto?</h2>
+          <p class="oficina-desc">A gente não vai fazer uma oficina presencial — mas queremos muito ouvir a comunidade. Responda algumas perguntas rápidas sobre golpes digitais e engenharia social: suas respostas ajudam a complementar a pesquisa de campo do TCC.</p>
+          <div class="fact-strip">
+            <div class="fact-item">
+              <svg class="fact-svg" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+              <div class="fact-label">Menos de 2 min para responder</div>
+            </div>
+            <div class="fact-item">
+              <svg class="fact-svg" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="1.6"><rect x="5" y="11" width="14" height="9" rx="1.5"/><path d="M8 11V7a4 4 0 018 0v4"/></svg>
+              <div class="fact-label">Não é preciso se identificar</div>
+            </div>
+            <div class="fact-item">
+              <svg class="fact-svg" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="1.6"><path d="M4 20V10M12 20V4M20 20v-7"/></svg>
+              <div class="fact-label">Alimenta o painel de dados da pesquisa</div>
+            </div>
+          </div>
+        </div>
+        <div class="oficina-right">
+          <div class="form-title">Formulário de opinião</div>
+          <div class="form-sub">Se o formulário não aparecer abaixo, use o link direto.</div>
+          <div class="opiniao-frame-wrap">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdJm2mNRQ5u3yAnC8n_66TKu-q6thuAjKI_2xuJ28q_VISy5A/viewform?embedded=true" title="Formulário de opinião">Carregando…</iframe>
+          </div>
+          <div class="opiniao-fallback">Prefere responder em outra aba? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJm2mNRQ5u3yAnC8n_66TKu-q6thuAjKI_2xuJ28q_VISy5A/viewform" target="_blank" rel="noopener noreferrer">Abrir o formulário →</a></div>
+        </div>
+      </div>
+    </div>
+
+    <a href="dashboard.html" class="section-link" style="margin-top:26px; display:inline-flex;">Ver os dados da pesquisa até agora →</a>
+  </div>
+</section>
+
+<footer><div id="site-footer"></div></footer>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-storage-compat.js"></script>
+<script src="firebase-config.js"></script>
+<script src="firebase-auth.js"></script>
+<script src="common.js"></script>
+</body>
+</html>
