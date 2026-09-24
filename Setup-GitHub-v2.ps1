@@ -393,8 +393,18 @@ function Select-OrCreateGitHubRepo {
     Write-Info "Buscando seus repositorios existentes no GitHub..."
     $reposJson = gh repo list --limit 20 --json name 2>$null
     $repos = @()
+
     if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($reposJson)) {
-        $repos = $reposJson | ConvertFrom-Json | Select-Object -ExpandProperty name
+        try {
+            $parsed = $reposJson | ConvertFrom-Json -ErrorAction Stop
+            if ($parsed) {
+                foreach ($r in $parsed) {
+                    if ($r.name) { $repos += $r.name }
+                }
+            }
+        } catch {
+            # Mantém a lista vazia caso o retorno venha em formato inesperado
+        }
     }
 
     $defaultName = Split-Path -Leaf (Get-Location)
@@ -409,7 +419,8 @@ function Select-OrCreateGitHubRepo {
         }
         Write-Host "  [0] Criar um NOVO repositorio com o nome da pasta ($defaultName)"
     } else {
-        Write-Host "  Nenhum repositorio encontrado na conta ou offline."
+        Write-Host "  Nenhum repositorio encontrado ou conta sem repositorios."
+        Write-Host "  [0] Criar um NOVO repositorio com o nome da pasta ($defaultName)"
     }
     Write-Host ""
 
@@ -426,7 +437,6 @@ function Select-OrCreateGitHubRepo {
         }
     }
 
-    # Se digitou o nome diretamente por texto
     return @{ Name = $choice; IsNew = $true }
 }
 
